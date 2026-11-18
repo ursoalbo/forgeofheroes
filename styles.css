@@ -103,6 +103,65 @@ img {
   color: var(--accent-gold);
 }
 
+/* Header Dropdown */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown summary {
+  list-style: none;
+  user-select: none;
+}
+
+.nav-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.dropdown-chevron {
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown[open] .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  min-width: 270px;
+  background: #121418;
+  border: 1px solid var(--border-steel);
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.75);
+  z-index: 100;
+}
+
+.dropdown-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 107, 26, 0.14);
+}
+
+.dropdown-item-title {
+  font-weight: 700;
+  font-size: 0.94rem;
+  color: var(--text-primary);
+}
+
+.dropdown-item-sub {
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -169,17 +228,47 @@ img {
 }
 
 .hero-subtitle {
-  max-width: 650px;
-  margin: 0 auto 32px;
+  max-width: 680px;
+  margin: 0 auto 34px;
   font-size: 1.12rem;
   color: var(--text-secondary);
 }
 
-.hero-actions {
+.hero-adventures {
+  margin: 0 auto 24px;
+}
+
+.hero-adventures-label {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-gold);
+  margin-bottom: 14px;
+}
+
+.adventure-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 14px;
+}
+
+.btn-adventure {
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.btn-adventure .btn-sub {
+  font-size: 0.82rem;
+  font-weight: 500;
+  opacity: 0.92;
+}
+
+.hero-social {
+  display: flex;
+  justify-content: center;
 }
 
 /* Section Headings */
@@ -279,11 +368,36 @@ body.subpage .steel-card::before {
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.65);
 }
 
+.story-title-group {
+  margin-bottom: 16px;
+}
+
+.story-title-group .section-title {
+  margin-bottom: 4px;
+}
+
+.story-title-en {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.story-title-kicker {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-gold);
+}
+
 .badge-row {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 16px 0 22px;
+  margin: 18px 0 22px;
 }
 
 .badge {
@@ -408,5 +522,10 @@ body.subpage .steel-card::before {
 
   .nav-links {
     display: none;
+  }
+
+  .nav-dropdown .btn {
+    padding: 10px 14px;
+    font-size: 0.82rem;
   }
 }
