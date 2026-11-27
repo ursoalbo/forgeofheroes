@@ -45,7 +45,7 @@
         <div class="hero-adventures">
           <h2 class="hero-adventures-label">Original Adventures</h2>
           <div class="adventure-buttons">
-            <a href="#story" class="btn btn-primary btn-adventure">
+            <a href="i-kampana-tis-avgis/" class="btn btn-primary btn-adventure">
               <span>Η Καμπάνα της Αυγής</span>
               <span class="btn-sub">(The Bell of Dawn)</span>
             </a>
@@ -107,4 +107,58 @@
             </div>
 
             <p style="color: var(--text-secondary);">
-              A
+              A fantasy adventure rich in messages and allegories. On the companion assets page, you'll find all the maps along with NPC and monster artwork to run the story at your table or on a Virtual Tabletop (Roll20, Foundry, Owlbear Rodeo).
+            </p>
+
+            <div class="badge-row">
+              <span class="badge">Languages: Greek, English</span>
+              <span class="badge">Includes Maps, NPCs &amp; Monsters</span>
+              <span class="badge">Ready for VTT &amp; Print</span>
+            </div>
+
+            <div class="story-actions">
+              <a href="i-kampana-tis-avgis/" class="btn btn-primary">
+                Adventure Downloads &amp; Assets
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="creator" class="section">
+      <div class="container">
+        <div class="creator-box">
+          <div class="creator-info">
+            <span class="card-tag">The Creator</span>
+            <h3>DM Ulftor</h3>
+            <p>
+              Daily content featuring 5e tips, homebrew ideas, behind-the-scenes looks at adventure writing, and interaction with the RPG community.
+            </p>
+          </div>
+          <a href="https://www.instagram.com/dm_ulftor/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Follow on Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Forge of Heroes (forgeofheroes.gr)</span>
+      <span>Cover Art «Η Καμπάνα της Αυγής»: Oleksandr Kozachenko</span>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('click', function (event) {
+      const dropdown = document.getElementById('digiPacksDropdown');
+      if (dropdown && dropdown.hasAttribute('open') && !dropdown.contains(event.target)) {
+        dropdown.removeAttribute('open');
+      }
+    });
+  </script>
+
+</body>
+</html>
